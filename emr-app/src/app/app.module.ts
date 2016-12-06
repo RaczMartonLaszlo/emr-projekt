@@ -3,7 +3,6 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { MeresPage } from '../pages/meres/meres';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ListPage } from '../pages/list/list';
 import { KiirasPage } from '../pages/kiiras/kiiras';
 
 @NgModule({
@@ -11,7 +10,6 @@ import { KiirasPage } from '../pages/kiiras/kiiras';
     MyApp,
     MeresPage,
     ItemDetailsPage,
-    ListPage,
     KiirasPage
   ],
   imports: [
@@ -22,7 +20,6 @@ import { KiirasPage } from '../pages/kiiras/kiiras';
     MyApp,
     MeresPage,
     ItemDetailsPage,
-    ListPage,
     KiirasPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

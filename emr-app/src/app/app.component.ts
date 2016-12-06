@@ -5,7 +5,6 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { MeresPage } from '../pages/meres/meres';
-import { ListPage } from '../pages/list/list';
 import { KiirasPage } from '../pages/kiiras/kiiras';
 
 
@@ -28,7 +27,6 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Mérés', component: MeresPage },
-      { title: 'My First List', component: ListPage },
       { title: 'Kiírás', component: KiirasPage }
     ];
   }

@@ -11,10 +11,11 @@
 <ion-content padding>
 
   <h3>Mérés</h3>
-
-{{pontossag}}
-  <!--<p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>-->
+Jelenlegi:{{pontossag}}<br>
+Átlag:{{atlag}}<br>
+Minták száma: {{mintak}}<br>
+  <p>
+    <button ion-button color="primary" (click)="helyzet()">Mentés</button>
+  </p>
 
 </ion-content>
