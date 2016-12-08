@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mérés</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>Mérés</h3>
+<h5>Minták száma: 
+  {{mintak}}<br>
+  Minták összege: 
+  {{osszeg}}<br>
+  Jelenlegi pontosság: 
+  {{pontossag}} m<br>
+  Minták átlaga: 
+  {{atlag}} m<br>
+</h5>
+  <p>
+    <button ion-button color="primary" (click)="helyzet()">Mentés</button>
+  </p>
+
+</ion-content>
