@@ -11,10 +11,15 @@
 <ion-content padding>
 
   <h3>Mérés</h3>
-Jelenlegi:{{pontossag}}<br>
-Átlag:{{atlag}}<br>
-Minták száma: {{mintak}}<br>
-teszt: {{teszt}}
+<h5>Minták száma: 
+  {{mintak}}<br>
+  Minták összege: 
+  {{osszeg}}<br>
+  Jelenlegi pontosság: 
+  {{pontossag}} m<br>
+  Minták átlaga: 
+  {{atlag}} m<br>
+</h5>
   <p>
     <button ion-button color="primary" (click)="helyzet()">Mentés</button>
   </p>

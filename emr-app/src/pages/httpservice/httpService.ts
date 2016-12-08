@@ -9,7 +9,7 @@ export class HttpService {
     constructor(private http: Http){    }
     post(adat: MeresPage){
         return this.http
-            .post("http://www.localhost:8080/post_data", adat)
+            .post("http://192.168.43.136:8080/post_data", adat)
             .toPromise()
             .then(res => res.json().data)
             .catch(this.handleError);

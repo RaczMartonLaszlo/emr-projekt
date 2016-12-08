@@ -12,7 +12,7 @@ import { Injectable } from '@angular/core'
 })
 export class MeresPage  implements OnInit{
 
-  pontossag=10000;
+  pontossag=0;
   osszeg=0;
   mintak=0;
   atlag=0;
@@ -22,7 +22,7 @@ export class MeresPage  implements OnInit{
   public kuldes;
   // teszt;
   constructor(private httpService: HttpService){
-
+  
   }
   ngOnInit(){
 
@@ -32,9 +32,23 @@ export class MeresPage  implements OnInit{
     let options = {enableHighAccuracy: true}
     Geolocation.getCurrentPosition(options).then((poz) =>{
       this.pontossag = poz.coords.accuracy;
+
+      this.pontossag=this.pontossag*1000;
+      this.pontossag=this.pontossag-(this.pontossag%1);
+      this.pontossag=this.pontossag/1000;
+
       this.mintak+=1;
       this.osszeg+= poz.coords.accuracy;
+
+      this.osszeg=this.osszeg*1000;
+      this.osszeg=this.osszeg-(this.osszeg%1);
+      this.osszeg=this.osszeg/1000;
+
       this.atlag=this.osszeg/this.mintak;
+
+      this.atlag=this.atlag*1000;
+      this.atlag=this.atlag-(this.atlag%1);
+      this.atlag=this.atlag/1000;
 
       this.kuldes = new KuldottAdat(this.pontossag, this.atlag, this.mintak, this.osszeg);
       // this.kuldes = JSON.parse(this.kuldes);
