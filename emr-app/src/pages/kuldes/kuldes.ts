@@ -3,11 +3,11 @@ export class KuldottAdat{
     pontossag;
     osszeg;
     atlag;
-    constructor(pontossag, atlag, mintak, osszeg){
-        this.mintak=mintak;
-        this.osszeg=osszeg;
+    constructor(pontossag){
+        // this.mintak=mintak;
+        // this.osszeg=osszeg;
         this.pontossag=pontossag;
-        this.atlag=atlag;
+        // this.atlag=atlag;
     }
     // mintak(){
     //     return this.mintak
